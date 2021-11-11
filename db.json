@@ -1,22 +1,32 @@
 {
   "projects": [
     {
-      "name": "Site novo do cliente",
-      "budget": "50000",
+      "name": "Site do cliente",
+      "budget": "30000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 1000,
+      "cost": 10000,
       "services": [
         {
-          "name": "Contratar PO",
-          "description": "Contratar funcionário de gerência",
-          "cost": "1000",
-          "id": "431c4afa-ca06-4a12-b5c6-2d242397abed"
+          "name": "Serviço com preço ok",
+          "cost": "10000",
+          "id": "e4c59b53-b8c8-4b48-83f8-89471daceeb4"
         }
       ],
       "id": 2
+    },
+    {
+      "name": "Projeto da Beets",
+      "budget": "9000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
     }
   ],
   "categories": [
