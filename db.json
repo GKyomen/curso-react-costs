@@ -7,8 +7,15 @@
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 1000,
+      "services": [
+        {
+          "name": "Contratar PO",
+          "description": "Contratar funcionário de gerência",
+          "cost": "1000",
+          "id": "431c4afa-ca06-4a12-b5c6-2d242397abed"
+        }
+      ],
       "id": 2
     }
   ],
