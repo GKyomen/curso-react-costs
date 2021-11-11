@@ -21,7 +21,7 @@ function Projects() {
     fetch("http://localhost:5000/projects", {
       method: "GET",
       headers: {
-        "Content-type": "application/json",
+        "Content-Type": "application/json",
       },
     })
       .then((res) => res.json())

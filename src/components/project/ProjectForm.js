@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from "react"
 import Input from "../form/Input"
 import Select from "../form/Select"
 import SubmitButton from "../form/SubmitButton"
@@ -9,10 +9,10 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [project, setProject] = useState(projectData || {})
 
   useEffect(() => {
-    fetch('http://localhost:5000/categories', {
-      method: 'GET',
+    fetch("http://localhost:5000/categories", {
+      method: "GET",
       headers: {
-        'Content-type': 'application/json'
+        "Content-Type": "application/json",
       },
     })
       .then((resp) => resp.json())
@@ -28,12 +28,12 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
   }
 
   function handleChange(e) {
-    setProject({ ...project, [e.target.name]: e.target.value})
+    setProject({ ...project, [e.target.name]: e.target.value })
   }
 
   function handleCategory(e) {
-    setProject({ 
-      ...project, 
+    setProject({
+      ...project,
       category: {
         id: e.target.value,
         name: e.target.options[e.target.selectedIndex].text,
@@ -49,7 +49,7 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         name="name"
         placeholder="Insira o nome do projeto"
         handleOnChange={handleChange}
-        value={project.name ? project.name : ''}
+        value={project.name ? project.name : ""}
       />
       <Input
         type="number"
@@ -57,14 +57,14 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
         name="budget"
         placeholder="Insira o orçamento total"
         handleOnChange={handleChange}
-        value={project.budget ? project.budget : ''}
+        value={project.budget ? project.budget : ""}
       />
-      <Select 
-        name="category_id" 
+      <Select
+        name="category_id"
         text="Selecione a categoria"
         options={categories}
         handleOnChange={handleCategory}
-        value={project.category ? project.category.id : ''}
+        value={project.category ? project.category.id : ""}
       />
       <SubmitButton text={btnText} />
     </form>
